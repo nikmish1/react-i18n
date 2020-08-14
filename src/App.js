@@ -1,23 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense, lazy } from "react";
+///import SampleText from "./components/SampleText/SampleText";
+// import logo from "./logo.svg";
+import "./i18n";
+//import { useTranslation } from "react-i18next";
+import "./App.css";
+
+const SampleText = lazy(() => import("./components/SampleText/SampleText"));
 
 function App() {
+  // const [state, setstate] = useState({ preferedLng: "en", translate: {} });
+  //const { t, i18n } = useTranslation();
+  // setstate({ ...state, translate: i18n.changeLanguage("en") });
+  //i18n.changeLanguage("en");
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Suspense fallback={null}>
+          <SampleText />
+        </Suspense>
       </header>
     </div>
   );
