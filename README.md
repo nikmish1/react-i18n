@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# react-i18n
+
+Mini project demonstrating multi-language support using react i18next. Loads translations dynamically from rest APIs.
+
 ## Available Scripts
 
 In the project directory, you can run:
